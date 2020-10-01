@@ -111,18 +111,27 @@
                 console.log("Updating List...");
                 tit = document.getElementById('title').value;
                 desc = document.getElementById('description').value;
-                if (localStorage.getItem('itemsJson')==null){
-                    itemJsonArray = [];
-                    itemJsonArray.push([tit, desc]);
-                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                if(document.getElementById('title').value.trim() === '')
+                {
+                    alert('Title required');
                 }
-                else{
-                    itemJsonArrayStr = localStorage.getItem('itemsJson')
-                    itemJsonArray = JSON.parse(itemJsonArrayStr);
-                    itemJsonArray.push([tit, desc]);
-                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                else
+                {
+                    if (localStorage.getItem('itemsJson')==null)
+                    {
+                        itemJsonArray = [];
+                        itemJsonArray.push([tit, desc]);
+                        localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                    }
+                    else
+                    {
+                        itemJsonArrayStr = localStorage.getItem('itemsJson')
+                        itemJsonArray = JSON.parse(itemJsonArrayStr);
+                        itemJsonArray.push([tit, desc]);
+                        localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                    }
+                    update();
                 }
-                update();
             }
 
             function update(){
@@ -162,7 +171,7 @@
 
             }
             function clearStorage(){
-                if (confirm("Do you areally want to clear?")){
+                if (confirm("Do you really want to clear?")){
                 console.log('Clearing the storage')
                 localStorage.clear();
                 update()
