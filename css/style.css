@@ -1,0 +1,20 @@
+body{
+	border: 8px solid grey;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-left: 1%;
+	padding-top: 1%;
+}
+p{
+	font-family: 'McLaren', cursive;
+}
+.blue{
+	color: lightblue;
+}
+.border{
+	border-left: 4px solid grey;
+	padding-left: 5px;
+}
+#bottomborder{
+	border-top: 0.5px solid lightgrey;
+}
