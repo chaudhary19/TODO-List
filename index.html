@@ -7,15 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
-    <title>TODOs List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>To Do List</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">TODOs List</a>
+        <a class="navbar-brand" href="#">To Do List</a>
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -47,36 +46,38 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
     </nav>
 
     <div class="container my-4">
-        <h2 class="text-center">TODOs List</h2>
-         
+        <h2 class="text-center">Add all your tasks here!</h2>
+        <button id="clear" class="btn btn-dark float-right" onclick="clearStorage()">Clear list</button>
+         <br><br>
             <div class="form-group">
-                <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" aria-describedby="emailHelp">
-                <small id="emailHelp" class="form-text text-muted">Add an item to the list</small>
+                <label for="title"><h5>Add Title</h5></label>
+                <input type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Provide title for new task">
+                
             </div>
 
             <div class="form-group">
-                <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="3"></textarea>
+                <label for="description"><h5>Description</h5></label>
+                <textarea class="form-control" id="description" rows="3" placeholder="Provide description to your task"></textarea>
             </div>
             
 
             <button   id="add" class="btn btn-primary">Add to list</button>
-            <button  id="clear" class="btn btn-primary" onclick="clearStorage()">Clear list</button>
-         
+            <br>
 
         <div id="items" class="my-4">
-            <h2>Your Items</h2>
+            <h2 class="text-center">Tasks you need to do!</h2>
+            <i><h6 class="text-center">Have some Coffee and get started</h6></i>
+            <br>
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">SNo</th>
+                    <th scope="col">S.No.</th>
                     <th scope="col">Item Title</th>
                     <th scope="col">Item Description</th> 
                     <th scope="col">Actions</th> 
@@ -85,11 +86,10 @@
                 <tbody id="tableBody">
                   <tr>
                     <th scope="row">1</th>
-                    <td>Get some Coffee</td>
-                    <td>You need coffee as you are a coder</td> 
+                    <td></td>
+                    <td></td> 
                     <td><button class="btn btn-sm btn-primary">Delete</button></td> 
-                  </tr>
-                  
+                  </tr>                  
                 </tbody>
               </table>
         </div>
@@ -97,6 +97,7 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -171,7 +172,7 @@
 
             }
             function clearStorage(){
-                if (confirm("Do you really want to clear?")){
+                if (confirm("Do you want to clear the entire list?")){
                 console.log('Clearing the storage')
                 localStorage.clear();
                 update()
