@@ -8,16 +8,16 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/styledark.css">
 
     <title>To Do List</title>
+    <link id="lightTheme" rel="stylesheet" type="text/css" href="css/style.css">
 
     
 </head>
 <!-- Internal css -->
 <style>
     li{
-        margin-left: 1rem;
+        margin-left: 1rem; 
     }
 </style>
 
@@ -51,10 +51,14 @@
                         <a class="dropdown-item" href="#">Not Urgent but Important</a>
                         <a class="dropdown-item" href="#">Urgent but Not Important</a>
                     </div>
-                </li>  
-
-
-                <li>
+                <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown"
+                       role="button" aria-haspopup="true" aria-expanded="false">Theme </a>
+                      <ul class="dropdown-menu">
+                        <li onclick="darkTheme()" class="themes"> <a class="dropdown-item" href="#"> Light Theme </a> </li>
+                        <li onclick="lightTheme()" class="themes"> <a class="dropdown-item" href="#">Dark Theme</a></li>
+                      </ul>
+                </li>
                     
                 </li>              
             </ul>
@@ -207,6 +211,18 @@
                 localStorage.clear();
                 update()
                 }
+            }
+
+            function darkTheme()
+            {
+              var theme = document.getElementById('lightTheme');
+              theme.href = "css/style.css";
+            }
+
+            function lightTheme()
+            {
+              var theme = document.getElementById('lightTheme');
+              theme.href = "css/styledark.css";
             }
           //Adding function for search
           $(document).ready(function(){

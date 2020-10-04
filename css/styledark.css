@@ -3,7 +3,7 @@ body{
   color: #ffffff;
 }
 p{
-	font-family: 'McLaren', cursive;
+    font-family: 'McLaren', cursive;
 }
 
 th{
@@ -14,15 +14,19 @@ td{
   color: #ffffff;
 }
 
+#theme{
+    color: #57d43f;
+}
+
 .blue{
-	color: lightblue;
+    color: lightblue;
 }
 .border{
-	border-left: 4px solid grey;
-	padding-left: 5px;
+    border-left: 4px solid grey;
+    padding-left: 5px;
 }
 #bottomborder{
-	border-top: 0.5px solid lightgrey;
+    border-top: 0.5px solid lightgrey;
 }
 
 .btn-primary{
@@ -72,11 +76,14 @@ footer{
     border-radius: 100%;
     border: 1px solid white;
     margin: 0.5rem;
-    padding: 0.8rem;   
+    padding: 0.8rem;  
+    color: #ffffff;
+
 }
 
 .container .social-list li:hover{
-    border: 1px solid #3ba5ec;
+    border: 1px solid: #57d43f ;
+    background: #57d43f ;
 }
 
 .container .social-list{
