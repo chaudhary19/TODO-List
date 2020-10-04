@@ -8,20 +8,22 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/footer.css">
+
     <title>To Do List</title>
+    <link id="lightTheme" rel="stylesheet" type="text/css" href="css/style.css">
+
+    
 </head>
 <!-- Internal css -->
 <style>
     li{
-        margin-left: 1rem;
+        margin-left: 1rem; 
     }
 </style>
 
 <body>
     <!-- Start nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-custom1 navbar-custom">
         <a class="navbar-brand" href="#">To Do List</a>        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,9 +35,11 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="about.html" target="_blank">About</a>
                 </li>
+
                 <!-- SWOT Analysis of tasks -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -47,7 +51,16 @@
                         <a class="dropdown-item" href="#">Not Urgent but Important</a>
                         <a class="dropdown-item" href="#">Urgent but Not Important</a>
                     </div>
-                </li>                
+                <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown"
+                       role="button" aria-haspopup="true" aria-expanded="false">Theme </a>
+                      <ul class="dropdown-menu">
+                        <li onclick="darkTheme()" class="themes"> <a class="dropdown-item" href="#"> Light Theme </a> </li>
+                        <li onclick="lightTheme()" class="themes"> <a class="dropdown-item" href="#">Dark Theme</a></li>
+                      </ul>
+                </li>
+                    
+                </li>              
             </ul>
         </div>
     </nav>
@@ -55,7 +68,7 @@
     <!-- Content -->
     <div class="container my-4">
         <h2 class="text-center">Add all your tasks here!</h2>
-        <button id="clear" class="btn btn-dark float-right" onclick="clearStorage()">Clear list</button>
+        <button id="clear" class="btn btn-primary float-right" onclick="clearStorage()">Clear list</button>
          <br><br>
             <div class="form-group">
                 <label for="title"><h5>Add Title</h5></label>
@@ -75,7 +88,7 @@
             <br>
             <div style="display: flex; width:70%;margin:0px auto;margin-bottom:20px;">
                 <input class="form-control mr-sm-2" id ="search" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
             </div>
             <table class="table">
                 <thead>
@@ -181,6 +194,7 @@
             add = document.getElementById("add");
             add.addEventListener("click", getAndUpdate);
             update();
+
             function deleted(itemIndex){
                 console.log("Delete", itemIndex);
                 itemJsonArrayStr = localStorage.getItem('itemsJson')
@@ -197,6 +211,18 @@
                 localStorage.clear();
                 update()
                 }
+            }
+
+            function darkTheme()
+            {
+              var theme = document.getElementById('lightTheme');
+              theme.href = "css/style.css";
+            }
+
+            function lightTheme()
+            {
+              var theme = document.getElementById('lightTheme');
+              theme.href = "css/styledark.css";
             }
           //Adding function for search
           $(document).ready(function(){
