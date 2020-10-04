@@ -1,6 +1,3 @@
-<<<<<<< HEAD:public/css/footer.css
-/* Placing and arranging entire footer */
-=======
 body{
   background: #2b2d30; 
   color: #ffffff;
@@ -57,7 +54,6 @@ td{
 
 
  /* Placing and arranging entire footer */
->>>>>>> upstream/master:public/css/styledark.css
 footer{
     font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 13rem; 
@@ -84,13 +80,6 @@ footer{
     border-radius: 100%;
     border: 1px solid white;
     margin: 0.5rem;
-<<<<<<< HEAD:public/css/footer.css
-    padding: 0.8rem;   
-}
-
-.container .social-list li:hover{
-    border: 1px solid #3ba5ec;
-=======
     padding: 0.8rem;  
     color: #ffffff;
 
@@ -99,7 +88,6 @@ footer{
 .container .social-list li:hover{
     border: 1px solid: #57d43f ;
     background: #57d43f ;
->>>>>>> upstream/master:public/css/styledark.css
 }
 
 .container .social-list{
