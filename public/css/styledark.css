@@ -58,11 +58,7 @@ footer{
     font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 13rem; 
     width: 100%;
-<<<<<<< HEAD:public/css/footer.css
-    background-color: #343a40;
-=======
     background-color: #000000;
->>>>>>> upstream/master:public/css/styledark.css
     color: white;    
     padding-top: 2.5rem;    
     margin-top: 4rem;
