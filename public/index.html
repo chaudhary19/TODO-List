@@ -1,10 +1,12 @@
-<!doctype html>
 <html lang="en">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="css/snackbar.css">
+    <script src="css/snackbar.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <title>To Do List</title>
@@ -17,6 +19,10 @@
 </style>
 
 <body>
+    <div id="snackBar" class="snackbar snack-show">
+        <span class="snackText" id="snackText"></span>
+        <button class="snack-button" id="snackButton"></button>
+        </div>
     <!-- Start nav bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">To Do List</a>        
@@ -131,6 +137,7 @@
                     update();
                     $("#title").val("");
                     $("#description").val("");
+                    showSnackBar("Item added to list",hasAction = false,actionText = String(),isNormal = true,isWarning = false);
                 }
             }
 
@@ -167,6 +174,7 @@
                 // Delete itemIndex element from the array
                 itemJsonArray.splice(itemIndex, 1);
                 localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+                showSnackBar("Item deleted from list",hasAction = false,actionText = String(),isNormal = false,isWarning = true);
                 update();
 
             }
@@ -186,6 +194,9 @@ $(document).ready(function(){
       });
     });
   });
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+  }
         </script>
     <!-- Script end -->
 </body>

@@ -1,0 +1,21 @@
+{
+    "short_name" : "TODO",
+    "name" : "TODO List",
+    "lang": "en-US",
+    "categories": ["tools"],
+    "icons": [
+      {
+        "src" : "/icon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+      
+    ],
+    "description": "This is a simple todo App",
+    "start_url" : "/",
+    "background_color" : "#fff",
+    "display" : "standalone",
+    "orientation": "any",
+    "scope" : "/",
+    "theme_color" : "#fff"
+}
