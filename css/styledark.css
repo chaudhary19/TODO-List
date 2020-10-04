@@ -1,6 +1,19 @@
+body{
+  background: #2b2d30; 
+  color: #ffffff;
+}
 p{
 	font-family: 'McLaren', cursive;
 }
+
+th{
+  color: #ffffff;
+}
+
+td{
+  color: #ffffff;
+}
+
 .blue{
 	color: lightblue;
 }
@@ -11,25 +24,37 @@ p{
 #bottomborder{
 	border-top: 0.5px solid lightgrey;
 }
-.navbar-custom1{ 
-            background-color: #343a40; 
+
+.btn-primary{
+  background: #57d43f;
+  border-color: #57d43f;
+}
+
+.btn-outline-primary{
+  background: #57d43f;
+
+}
+
+.nav-link{
+  color: #57d43f;
+}
+.navbar-custom { 
+            background-color: #000000; 
         } 
           
-.navbar-custom1 .navbar-brand, 
-.navbar-custom1 .navbar-text
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-text
  { 
          color: #ffffff; 
  }
- .nav-link{
-  color: #ffffff;
-}
 
-/* Placing and arranging entire footer */
+
+ /* Placing and arranging entire footer */
 footer{
     font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 13rem; 
     width: 100%;
-    background-color: #343a40;
+    background-color: #000000;
     color: white;    
     padding-top: 2.5rem;    
     margin-top: 4rem;
@@ -87,5 +112,4 @@ a i{
     margin-top: 0.5rem;
     font-size: 1.6rem;
     letter-spacing: 2px;
-
 }
