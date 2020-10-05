@@ -18,9 +18,7 @@ td{
     color: #57d43f;
 }
 
-.blue{
-    color: lightblue;
-}
+
 .border{
     border-left: 4px solid grey;
     padding-left: 5px;
@@ -31,11 +29,14 @@ td{
 
 .btn-primary{
   background: #57d43f;
-  border-color: #57d43f;
+  border: #57d43f;
+  color: #ffffff;
 }
 
 .btn-outline-primary{
   background: #57d43f;
+  color: #ffffff;
+  border-color:  #57d43f;
 
 }
 
@@ -82,8 +83,8 @@ footer{
 }
 
 .container .social-list li:hover{
-    border: 1px solid: #57d43f ;
-    background: #57d43f ;
+    border: 1px solid #57d43f ;
+    
 }
 
 .container .social-list{
@@ -111,7 +112,7 @@ a i{
 } 
 
 .fa:hover{
-    color:#3ba5ec;
+    color:#57d43f;
 }
 
 .container h3{
