@@ -25,6 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
+
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
@@ -43,7 +44,9 @@
                     </div>
                 </li>
                 <li class="nav-item">
+
                     <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -52,11 +55,35 @@
             </form>
         </div>
     </nav>
-  
+  </head>
+
+  <script type="text/javascript">
+    function submitEmailForm(form) {
+      var obj = new XMLHttpRequest();
+      obj.onreadystatechange = function(){
+        if(obj.readyState == 4){
+          if(obj.status == 200){
+            var res = JSON.parse(obj.responseText);
+            alert(res.message);
+          }
+          else{
+            alert("XMLHttp status " + obj.status + ": " + obj.statusText);
+          }
+        }
+      };
+      obj.open("post", form.action, true);
+      obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+      obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, message: form.message.value }));
+      return false;
+    }
+  </script>
+
+  <body>
       <section class="contact">
         <div class="content">
           <h2>CONTACT US</h2>
-          <p>If you have any kind of querry or want to give us Feedback... Do write to us!</p>
+          <p>You can contact during college timings or even after the college timings. We are open for you all even on weekends.</p>
+
 
         </div>
         <div class="container">
@@ -65,18 +92,22 @@
               <div class="icon"><i class="fa fa-map" aria-hidden="true"></i></div>
                 <div class="text">
                   <h3>ADDRESS</h3>
-                  <p>Ghaziabad, Uttar Pradesh 201009</p>
+
+                  <p>Campus -1, 19th KM Stone, NH 24, Ghaziabad, Uttar Pradesh 201009</p>
               </div>
               </div>
               <div class="box">
-                <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+                <div class="icon"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+
                   <div class="text">
                     <h3>EMAIL ADDRESS</h3>
                     <p>abes@xyz.com</p>
                 </div>
                 </div>
                 <div class="box">
-                  <div class="icon"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+
+                  <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+
                     <div class="text">
                       <h3>CONTACT NUMBER</h3>
                       <p>0123456789</p>
@@ -84,18 +115,20 @@
                   </div>
             </div>
             <div class="contactForm">
-              <form>
+
+              <form action="/ajax/email" class="contact-form" method="POST" onsubmit="return submitEmailForm(this);">
                 <h2>Send Message</h2>
                 <div class="inputBox">
-                  <input type="text" name="" required="required">
-                  <span>Full name</span>
+                  <input type="text" name="name" class="contact-form-input" required />
+                  <span>FULL NAME</span>
                 </div>
                 <div class="inputBox">
-                  <input type="text" name="" required="required">
-                  <span>Email</span>
+                  <input type="email" name="email" class="contact-form-input" required />
+                  <span>EMAIL</span>
                 </div>
                 <div class="inputBox">
-                  <textarea required="required"></textarea>
+                  <textarea name="message" class="contact-form-input" required></textarea>
+
                   <span>Type Your Message....</span>
                 </div>
                 <div class="inputBox">

@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 .navbar .nav-link{
     margin-left: 20px;
 }
@@ -13,13 +14,16 @@
 {
     position: relative;
     min-height: 100vh;
-    padding: 30px 100px;
+
+    padding: 50px 100px;
+
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    background-image: url(image/background.jpg);
     background-size: cover;
-    background-image: url("../images/contact.jpg");
 }
 
 .contact .content 
@@ -31,15 +35,18 @@
 {
    font-size: 36px;
    font-weight: 500;
-   color: black;
+
+   color: #fff;
 }
 .contact .content p
 {
     font-weight: 300;
+
     color:#186dec;
     margin: 10px;
     margin-bottom: 30px;
     font-size: 1.2rem;
+
 }
 .container
 {
@@ -47,6 +54,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-top: 30px;
 }
 .container .contactInfo 
 {
@@ -69,6 +78,7 @@
     min-width: 60px;
     height: 60px;
     background-color: white;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,31 +90,31 @@
     display: flex;
     margin-left: 20px;
     font-size: 16px;
-    color: black;
+
+    color: #fff;
     flex-direction: column;
     font-weight: 300;
 }
 .container .contactInfo .box .text h3
 {
     font-weight: 500;
-    color: #186dec;
+
+    color: #00bcd4;
+
 }
 .contactForm{
     width: 40%;
     padding: 40px;
-    
+
+    background: #fff;
 }
 .contactForm h2{
     font-size: 30px;
-    text-transform: uppercase;
 }
-
 .contactForm .inputBox{
     position: relative;
     width: 100%;
     margin-top: 10px;
-    
-    
 }
 .contactForm .inputBox input,
 .contactForm .inputBox textarea
@@ -118,7 +128,6 @@
      outline: none;
      resize: none;
      background-color: rgb(235, 235, 235);
-    
 }
 .contactForm .inputBox span{
     position: absolute;
@@ -130,6 +139,7 @@
     transition: 0.5s;
     color: #666;
     text-transform: capitalize;
+
 }
 .contactForm .inputBox input:focus ~ span,
 .contactForm .inputBox input:valid ~ span,
@@ -143,7 +153,8 @@
 .contactForm .inputBox input[type="submit"]
 {
     width: 100px;
-    background:#186dec;
+
+    background: #00bcd4;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -170,6 +181,7 @@
         width: 100%;
     }
 }
+
 footer{
     font-family:  'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 8.5rem; 
@@ -225,4 +237,5 @@ footer{
 .container .social-list .fa:hover{
     color:#3ba5ec;
 }
+
 
