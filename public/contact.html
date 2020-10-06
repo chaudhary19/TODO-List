@@ -8,8 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="contactus.css">
+    
     <title>ABES Clubs</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">To Do List</a>
         
@@ -21,10 +25,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html" target="_blank">About</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -39,7 +44,9 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html" tabindex="-1" aria-disabled="true">Contact</a>
+
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -77,6 +84,7 @@
           <h2>CONTACT US</h2>
           <p>You can contact during college timings or even after the college timings. We are open for you all even on weekends.</p>
 
+
         </div>
         <div class="container">
           <div class="contactInfo">
@@ -84,18 +92,22 @@
               <div class="icon"><i class="fa fa-map" aria-hidden="true"></i></div>
                 <div class="text">
                   <h3>ADDRESS</h3>
+
                   <p>Campus -1, 19th KM Stone, NH 24, Ghaziabad, Uttar Pradesh 201009</p>
               </div>
               </div>
               <div class="box">
                 <div class="icon"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+
                   <div class="text">
                     <h3>EMAIL ADDRESS</h3>
                     <p>abes@xyz.com</p>
                 </div>
                 </div>
                 <div class="box">
+
                   <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+
                     <div class="text">
                       <h3>CONTACT NUMBER</h3>
                       <p>0123456789</p>
@@ -103,6 +115,7 @@
                   </div>
             </div>
             <div class="contactForm">
+
               <form action="/ajax/email" class="contact-form" method="POST" onsubmit="return submitEmailForm(this);">
                 <h2>Send Message</h2>
                 <div class="inputBox">
@@ -115,6 +128,7 @@
                 </div>
                 <div class="inputBox">
                   <textarea name="message" class="contact-form-input" required></textarea>
+
                   <span>Type Your Message....</span>
                 </div>
                 <div class="inputBox">
@@ -123,8 +137,22 @@
                 
               </form>
               </div>
-        </div>
+            </div>
       </section>
+      <footer>
+        <div class="container align-text-bottom">
+            <!-- Social Links -->
+            <ul class="social-list">
+              <div class="footer-icons">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>          
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+              </div>
+            </ul>
+        </div>
+      </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

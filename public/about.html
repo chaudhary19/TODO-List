@@ -9,9 +9,12 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <style type="text/css">
         body{
-            background-image: url(images/bg1.jpg);
+            background-image: url("../images/bg1.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+        }
+        .navbar .nav-link{
+            margin-left: 20px;
         }
     </style>
 	<link href="https://fonts.googleapis.com/css?family=McLaren&display=swap" rel="stylesheet">
@@ -29,10 +32,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html" target="_blank">About</a>
+                    <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -47,19 +50,20 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html" tabindex="-1" aria-disabled="true">Contact</a>
+                    <a class="nav-link" href="contact.html" tabindex="-1" aria-disabled="true">Contact Us</a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="container" style="margin-bottom: 100px;">
-        <img src="images/bg.jpg" alt="todo" class="center">
-        <p><h1 style="text-align: center; font-family: cursive; color: purple;">A Scalable TODO-List Web Application</h1></p>
+        <img src="../images/bg.jpg" alt="todo" class="center">
+        <p><h1 style="text-align: center; font-family: cursive; color:white;">A Scalable TO DO-List Web Application</h1></p>
 
-        <p><h2>Features</h2></p> <p><div class="border">
-            <ul style="font-size: 20px;">
+        <p><h2>Features</h2></p>
+         <p><div class="border">
+            <ul style="font-size: 20px; padding: 10px 30px;">
                 <li>Add tasks with description</li>
-                <li>Delete tasks</li>
+                <li>Have feature of deleting tasks if they are no loger needed</li>
                 <li>Clear list</li>
                 <li>Tasks will be displayed in form of table</li>
             </ul>
