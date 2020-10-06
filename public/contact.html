@@ -49,6 +49,28 @@
         </div>
     </nav>
   </head>
+
+  <script type="text/javascript">
+    function submitEmailForm(form) {
+      var obj = new XMLHttpRequest();
+      obj.onreadystatechange = function(){
+        if(obj.readyState == 4){
+          if(obj.status == 200){
+            var res = JSON.parse(obj.responseText);
+            alert(res.message);
+          }
+          else{
+            alert("XMLHttp status " + obj.status + ": " + obj.statusText);
+          }
+        }
+      };
+      obj.open("post", form.action, true);
+      obj.setRequestHeader("Content-Type", "application/json"); // NOTICE: "application/json"
+      obj.send(JSON.stringify({ name: form.name.value, email: form.email.value, message: form.message.value }));
+      return false;
+    }
+  </script>
+
   <body>
       <section class="contact">
         <div class="content">
@@ -81,18 +103,18 @@
                   </div>
             </div>
             <div class="contactForm">
-              <form>
+              <form action="/ajax/email" class="contact-form" method="POST" onsubmit="return submitEmailForm(this);">
                 <h2>Send Message</h2>
                 <div class="inputBox">
-                  <input type="text" name="" required="required">
+                  <input type="text" name="name" class="contact-form-input" required />
                   <span>FULL NAME</span>
                 </div>
                 <div class="inputBox">
-                  <input type="text" name="" required="required">
+                  <input type="email" name="email" class="contact-form-input" required />
                   <span>EMAIL</span>
                 </div>
                 <div class="inputBox">
-                  <textarea required="required"></textarea>
+                  <textarea name="message" class="contact-form-input" required></textarea>
                   <span>Type Your Message....</span>
                 </div>
                 <div class="inputBox">
@@ -101,7 +123,7 @@
                 
               </form>
               </div>
-            </div>
+        </div>
       </section>
 
     <!-- Optional JavaScript -->

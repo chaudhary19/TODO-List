@@ -1,0 +1,23 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "It maintains a TODO list of the user according to him. User can anytime add some tasks to his TODO list and anytime Delete the finished task from \r the TODO List.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arsalanhub/TODO-List.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arsalanhub/TODO-List/issues"
+  },
+  "homepage": "https://github.com/arsalanhub/TODO-List#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  }
+}
